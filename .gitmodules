@@ -1,0 +1,3 @@
+[submodule "nfancurve/.config/nfancurve"]
+	path = nfancurve/.config/nfancurve
+	url = https://github.com/nan0s7/nfancurve.git
