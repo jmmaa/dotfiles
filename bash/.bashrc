@@ -131,5 +131,10 @@ neofetch --config $HOME/.config/neofetch/custom-configs/onrefetch/onrefetch.conf
 # export cargo binaries path 
 CUSTOM_CARGO_BIN_DIR="$HOME/.cargo/bin"
 [ -s $CUSTOM_CARGO_BIN_DIR ] && export PATH="$CUSTOM_CARGO_BIN_DIR:$PATH"
+
+# pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 # -------------- #
 
