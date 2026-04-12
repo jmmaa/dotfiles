@@ -123,10 +123,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # --- CUSTOM --- #
 # neofetch setup
-neofetch --config $HOME/.config/neofetch/custom-configs/onrefetch/onrefetch.conf
+if [ -x "$(command -v neofetch)" ]; then
+    neofetch --config $HOME/.config/neofetch/custom-configs/onrefetch/onrefetch.conf
+fi
 
 # oh-my-posh setup
-. $HOME/.config/omp/setup.sh
+if [ -x "$(command -v oh-my-posh)" ]; then
+    . $HOME/.config/oh-my-posh/setup.sh
+fi
 
 # export cargo binaries path 
 CUSTOM_CARGO_BIN_DIR="$HOME/.cargo/bin"
